@@ -113,7 +113,7 @@ const easyScroll = ({
       const scrollToForThisTick = (
         isToBottomOrToRight ? 
         scrollAmt + initialScrollPosition : 
-        totalScroll - scrollAmt
+        initialScrollPosition - scrollAmt
       );
 
       if (runTime < duration) {
@@ -135,7 +135,7 @@ const easyScroll = ({
         const scrollToForFinalTick = (
           isToBottomOrToRight ? 
           scrollAmt + initialScrollPosition : 
-          totalScroll - scrollAmt
+          initialScrollPosition - scrollAmt
         );
         if (isWindow) {
           const xScrollTo = isHorizontalDirection ? scrollToForFinalTick : 0;
