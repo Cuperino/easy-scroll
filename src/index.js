@@ -32,6 +32,8 @@ const getProgress = ({
   return false;
 }
 
+let scrollOnNextTick;
+
 const getTotalScroll = ({
   isWindow,
   scrollableDomEle,
@@ -97,7 +99,7 @@ const easyScroll = ({
     totalScroll = scrollAmount;
   }
 
-  const scrollOnNextTick = (timestamp) => {
+  scrollOnNextTick = (timestamp) => {
     const runTime = timestamp - startTime;
     const progress = getProgress({
       easingPreset, 
